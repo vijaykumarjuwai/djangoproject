@@ -1,7 +1,7 @@
-djangoproject/settings.py
+# djangoproject/settings.py
 .idea/
 db.sqlite3
-manage.py
+# manage.py
 website/migrations
 djangoproject/__pycache__/settings.cpython-35.pyc
 
