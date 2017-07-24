@@ -1,0 +1,1 @@
+console.log('The main js file is here');

@@ -25,7 +25,7 @@ SECRET_KEY = '#vlh^5@p*=f4ul#)@^(kmf-^e3+u4^$2&a27u+e!p%30rl)%h9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '139.59.126.214',]
 
 
 # Application definition
@@ -78,10 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vijaykumarwebsite',
-	'USER': 'root',
-	'PASSWORD': 'er7mnyxo',
-	'HOST': 'localhost',
-	'PORT': '',
+	    'USER': 'root',
+	    'PASSWORD': 'er7mnyxo',
+	    'HOST': 'localhost',
+	    'PORT': '',
     }
 }
 
@@ -124,4 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '../static/')
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "website/static"),
+]
