@@ -3,6 +3,7 @@ djangoproject/settings.py
 .idea/
 db.sqlite3
 manage.py
+website/migrations
 
 .DS_Store
 bin/
