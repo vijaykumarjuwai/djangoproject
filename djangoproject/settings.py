@@ -78,10 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vijaykumarwebsite',
-	'USER': 'root',
-	'PASSWORD': 'er7mnyxo',
-	'HOST': 'localhost',
-	'PORT': '',
+	    'USER': 'root',
+	    'PASSWORD': 'er7mnyxo',
+	    'HOST': 'localhost',
+	    'PORT': '',
     }
 }
 
@@ -124,4 +124,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '../static/')
-
