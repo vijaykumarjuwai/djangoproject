@@ -3,6 +3,7 @@
 db.sqlite3
 manage.py
 website/migrations
+djangoproject/__pycache__/settings.cpython-35.pyc
 
 .DS_Store
 bin/
