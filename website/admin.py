@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Articles
+from .models import Article
 
 # Register your models here.
 class ArticlesAdmin(admin.ModelAdmin):
@@ -8,4 +8,4 @@ class ArticlesAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 
-admin.site.register(Articles, ArticlesAdmin)
+admin.site.register(Article, ArticlesAdmin)
