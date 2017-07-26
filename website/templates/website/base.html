@@ -6,37 +6,53 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'website/css/freelancer.css' %}">
     <link rel="stylesheet" href="{% static 'website/css/main.css' %}">
     <title>{% block title %}{% endblock %}</title>
+
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header clearfix">
-            <nav>
-              <ul class="nav nav-pills float-right">
-                <li class="nav-item">
-                  <a class="nav-link {% block nav-about %}{% endblock %}" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% block nav-contact %}{% endblock %}" href="{% url 'contact' %}">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% block nav-reviews %}{% endblock %}" href="{% url 'reviews' %}">Reviews</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% block nav-resume %}{% endblock %}" href="{% url 'resume' %}">Resume</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% block nav-tutorials %}{% endblock %}" href="{% url 'tutorials' %}">Tutorials</a>
-                </li>
-              </ul>
-            </nav>
-            <h3 class="text-muted"><a href="{% url 'index' %}">Vijaykumar</a></h3>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">Vijaykumar Bhattacharji</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link {% block nav-home %}{% endblock %}" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {% block nav-resume %}{% endblock %}" href="{% url 'resume' %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {% block nav-contact %}{% endblock %}" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        {% block content %}
-        {% endblock %}
-    </div>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
