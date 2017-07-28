@@ -4,6 +4,36 @@
 
 {% block content %}
     <div class="container margin-top-50">
-        <p>From Articles</p>
+        <div class="articlesList">
+            {% for article in articles %}
+                <article>
+                    <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+                    <p class="date">Published: {{ article.publish | date }} </p>
+                    <p>{{ article.body | safe | truncatewords:50 | linebreaks }}</p>
+                </article>
+            {% endfor %}
+        </div>
     </div>
+
+    {% if length > 10 %}
+    <div class="container pagination-div">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+                <li class="page-item">
+                    {% if page_obj.has_previous %}
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-disabled="true">previous</a>
+                    {% endif %}
+                </li>
+                {% for pagenum in paginator.page_range %}
+                    <li class="page-item"><a class="page-link" href="?page={{ pagenum }}">{{ pagenum }}</a></li>
+                {% endfor %}
+                <li class="page-item">
+                    {% if page_obj.has_next %}
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </li>
+          </ul>
+        </nav>
+    </div>
+    {% endif %}
 {% endblock %}
