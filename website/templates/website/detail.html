@@ -1,5 +1,10 @@
 {% extends 'website/base.html' %}
 
 {% block content %}
-
+    <div class="margin-top-60 container">
+        <div class="article">
+            <h2>{{ object.title }}</h2>
+            <p>{{ object.body | safe }}</p>
+        </div>
+    </div>
 {% endblock %}
