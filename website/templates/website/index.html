@@ -9,7 +9,7 @@
                 <article>
                     <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
                     <p class="date">Published: {{ article.publish | date }} </p>
-                    <p>{{ article.body | safe | truncatewords:50 | linebreaks }}</p>
+                    <p>{{ article.body | safe | truncatewords_html:200 }}</p>
                 </article>
             {% endfor %}
         </div>
