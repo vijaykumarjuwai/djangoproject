@@ -1,20 +1,22 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 # Create your models here.
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super(PublishedManager, self).get_queryset().filter(status='published')
 
-class Articles(models.Model):
+class Article(models.Model):
     STATUS_CHOICES = (
         ('draft', 'Draft'),
         ('published', 'Published')
     )
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    body = models.TextField(default='')
+    body = RichTextField(default='')
     publish = models.DateTimeField(default=timezone.now)
     created  = models.DateTimeField(auto_now_add=True)
     updated  = models.DateTimeField(auto_now=True)
@@ -22,6 +24,10 @@ class Articles(models.Model):
     author = models.ForeignKey(User, related_name='articles')
     objects = models.Manager()
     published = PublishedManager()
+
+    def get_absolute_url(self):
+        return reverse('article-detail',
+                       kwargs={'slug': self.slug})
 
     class Meta:
         ordering = ('-publish',)

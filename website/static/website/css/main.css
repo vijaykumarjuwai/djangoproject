@@ -1,8 +1,167 @@
-* {
-    padding: 0;
-    margin: 0;
+@media (min-width: 992px)
+{
+    #mainNav {
+        padding: 0px;
+    }
 }
 
-body {
-    background-color: seagreen;
+@media (min-width: 768px)
+{
+    header .masthead .container {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
 }
+
+header .masthead .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-top-60 {
+    margin-top: 60px;
+}
+
+section {
+    padding-top: 1.5rem;
+    padding-bottom: 0.2rem;
+}
+
+.resume h1, h2, h3{
+    text-align: center;
+}
+
+
+hr.star-light,
+hr.star-primary {
+  max-width: 250px;
+  margin: 25px auto 30px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-top: solid 5px; }
+
+hr.star-light:after,
+hr.star-primary:after {
+  font-family: FontAwesome;
+  font-size: 2em;
+  position: relative;
+  top: -.8em;
+  display: inline-block;
+  padding: 0 .25em;
+  content: '\f005'; }
+
+hr.star-light {
+  border-color: white; }
+
+hr.star-light:after {
+  color: white;
+  background-color: #18BC9C; }
+
+hr.star-primary {
+  border-color: #2C3E50; }
+
+hr.star-primary:after {
+  color: #2C3E50;
+  background-color: white; }
+
+/* Start articles */
+.articlesList {
+  padding-top: 1.5rem;
+}
+
+article h2 {
+  text-align: left;
+  font-weight: 400;
+}
+
+article {
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+article p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2em;
+  text-align: justify;
+}
+
+article .date {
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+.pagination-div {
+    text-align: center;
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.pagination-div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer-content {
+  display: flex; 
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  height: inherit;
+}
+
+.codesnippet pre {
+    background: #333333;
+    color: white;
+    padding: 20px;
+}
+
+.blog-image img {
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
