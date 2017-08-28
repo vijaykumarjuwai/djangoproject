@@ -80,9 +80,11 @@ article h2 {
 }
 
 article {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: column;
+    border-bottom: 2px dashed #333333;
 }
 
 article p {

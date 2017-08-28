@@ -8,7 +8,7 @@ class ArticleListView(ListView):
     queryset = Article.published.all()
     length = len(queryset)
     context_object_name = 'articles'
-    paginate_num = 3
+    paginate_num = 2
     paginate_by = paginate_num
     template_name = 'website/index.html'
 
