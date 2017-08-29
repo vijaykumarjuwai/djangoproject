@@ -135,9 +135,21 @@ body {
   display: flex; 
   justify-content: center;
   align-items: flex-end;
-  align-content: center;
   height: inherit;
 }
+
+.footer-content > div {
+    margin-left: 20px;
+}
+
+.footer-contacts {
+    display: flex;
+}
+
+.footer-contacts p {
+    margin-left: 5px;
+}
+
 
 .codesnippet pre {
     background: #333333;
