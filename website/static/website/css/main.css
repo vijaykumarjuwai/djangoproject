@@ -100,7 +100,6 @@ article .date {
 
 .pagination-div {
     text-align: center;
-    width: 500px;
     margin: 30px auto;
     padding: 20px;
 }
@@ -138,8 +137,10 @@ body {
   height: inherit;
 }
 
-.footer-content > div {
-    margin-left: 20px;
+@media screen and (min-width: 520px) {
+    .footer-content > div {
+        margin-left: 20px;
+    }
 }
 
 .footer-contacts {

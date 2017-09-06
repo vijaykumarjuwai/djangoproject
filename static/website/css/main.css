@@ -84,7 +84,6 @@ article {
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
-    border-bottom: 2px dashed #333333;
 }
 
 article p {
@@ -101,7 +100,6 @@ article .date {
 
 .pagination-div {
     text-align: center;
-    width: 500px;
     margin: 30px auto;
     padding: 20px;
 }
@@ -136,9 +134,23 @@ body {
   display: flex; 
   justify-content: center;
   align-items: flex-end;
-  align-content: center;
   height: inherit;
 }
+
+@media screen and (min-width: 520px) {
+    .footer-content > div {
+        margin-left: 20px;
+    }
+}
+
+.footer-contacts {
+    display: flex;
+}
+
+.footer-contacts p {
+    margin-left: 5px;
+}
+
 
 .codesnippet pre {
     background: #333333;
