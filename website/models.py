@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class PublishedManager(models.Manager):
@@ -24,6 +25,7 @@ class Article(models.Model):
     author = models.ForeignKey(User, related_name='articles')
     objects = models.Manager()
     published = PublishedManager()
+    tags = TaggableManager()
 
     def get_absolute_url(self):
         return reverse('article-detail',
